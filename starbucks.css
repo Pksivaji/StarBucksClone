@@ -1,0 +1,601 @@
+body{
+     background-color: white;
+     overflow-x: hidden;
+      
+}
+
+::-webkit-scrollbar {
+   display: none;
+ }
+
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+    text-decoration:none;
+
+  }
+  /* ------------nav bar------------------------------ */
+  .navbar{
+     /* border-bottom:2px solid rgb(50, 213, 61); */
+     border-radius:1px 1px 13px 13px;
+     height:102px;
+     position:sticky;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index:2;
+     background-color:white ;
+     
+}
+.navbar .first{
+   display:flex;
+   gap:42px;
+}
+.navbar .first ul{
+    display: flex;
+    gap:42px;
+    position:relative;
+    top:42px;
+    list-style-type: none;
+     
+} 
+.navbar .first ul a{
+    color:green;
+    height: 400px;
+}
+.navbar .first ul a:hover{
+    font-weight:bold;
+    
+}
+.navbar .second{
+    position:relative;
+    display: inline;
+    top:-74px;
+    left:602px;
+}
+.navbar .second input[type="text"]{
+    padding:12px 62px 12px 30px;
+    border-radius:22px;
+    border:none;
+    box-shadow:1px 2px rgb(203, 187, 187);
+    border:1px solid rgb(220, 209, 209);
+   
+}
+.navbar .third{
+    position: relative;
+    top:-102px;
+    font-size: 30px;
+    margin-left: 80vw;
+    color:rgb(140, 148, 155);
+}
+
+.navbar .fa-bars{
+   position:relative;
+   float:right;
+   margin:-55px 22px;
+   font-size:22px;
+   cursor:pointer;
+   display:none;
+}
+
+.navbar .fa-xmark{
+   position:relative;
+   float:right;
+   margin:-55px 22px;
+   font-size:22px;
+   cursor:pointer;
+   display:none;
+}
+
+/* ------------small screen nav bar--------------- */
+.small-nav{
+   height:auto;
+   position:sticky;
+   top: 17vh;
+   left: 0;
+   right: 0;
+   z-index:2;
+   background-color:rgb(247, 247, 247);
+   display:none;
+}
+
+  /* ---------------------grid code -------------- */
+.container{
+    display:grid;
+    width:100vw;
+    height:auto;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:30px 600px 500px 300px 450px 600px;
+    grid-template-areas: "link    link    link"
+                        "handcrafts  handcrafts  handcrafts"
+                        "offers  offers  offers"
+                        "recommends  recommends  recommends"
+                        "footer  footer  footer"
+                        "last-footer  last-footer  last-footer"
+}
+/* -----------------1st row in grids----------------- */
+.container .link{
+       grid-area:link;
+       background-color:rgb(29, 63, 49);
+       position:relative;
+       margin-top:-43px; 
+       width:100vw;
+       
+}
+.container .link p{
+     position:absolute;
+     color:white;
+     padding:5.2vh 3.5vw;
+     font-size:2vw;
+     font-size:2vmax;
+     
+     
+} 
+.container .link button{
+     position:relative;
+     float:right;
+     top:35%;
+     background-color:transparent;
+     color:white;
+     border:1px solid white;
+     cursor:pointer;
+     margin-right:12vw;
+     padding:0.3vw 1.2vw;
+     border-radius: 22px;
+     font-size: 22px;
+     font-size :1.4vmax;
+     line-height: 15px;
+
+} 
+/* -----------------------2nd row in grids------------------------------- */
+.container .handcrafts{
+       grid-area:handcrafts;
+       background-color:rgb(246, 247, 245);
+       width:100vw;
+  }
+ 
+.container .handcrafts h2 {
+   padding:22px 0px 23px 53px;
+   margin-bottom: 12px;
+   font-family:cursive; 
+   font-size:clamp(18px,3vw,28px);  
+}
+.container .handcrafts .images{
+      padding:22px 0px 23px 53px;
+      margin-bottom: 12px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content: center;
+      font-family:cursive;   
+  } 
+.container .handcrafts .images span img{
+          position:relative;
+          border-radius:50% 50%;
+          width:100px;
+          height:100px;
+          object-fit:cover;
+          margin:auto 53px 3px 33px;        
+  }
+
+  .container .handcrafts .images span p{
+    font-size:clamp(15px,2vw,17px);
+    margin:auto auto 36px 42px;
+    
+  }
+
+   .container .handcrafts .slider{
+     width:80vw;
+     height:150px;
+     position:absolute;
+     margin: 7px 16%;
+     display: flex;
+     column-gap:25vw;   
+     transition: transform 0.4s ease-in-out;
+   }
+   .container .handcrafts .slider .slide,
+   .container .handcrafts .slider .slide,
+   .container .handcrafts .slider .slide {
+     position:relative;
+     box-shadow:0px 0px 5px rgb(243, 244, 238);
+     min-width:85%;
+     height:260px;
+     border-radius:12px;
+     padding:0.1vh 4vw;
+     background-image: url("https://media.istockphoto.com/id/644406594/photo/empty-brown-wooden-table-and-coffee-shop-interior.webp?b=1&s=170667a&w=0&k=20&c=5xHRsPHzGnQnR0ubk9Vo7otdnMRpoAgcM5IBIC_fnb8=");
+     background-repeat: no-repeat;
+     background-size: cover; 
+      
+   }
+
+   .container .handcrafts .slider .slide,
+   .container .handcrafts .slider .slide{
+      margin-right:25px;
+   }
+
+   .container .handcrafts .slider .slide span img,
+   .container .handcrafts .slider .slide span img,
+   .container .handcrafts .slider .slide span img{
+     position:relative;
+     top:90px;
+     z-index: 1;
+   }
+   .container .handcrafts .slider .slide .span1 p,h3,h5,big,
+   .container .handcrafts .slider .slide .span1 p,h3,h5,big,
+   .container .handcrafts .slider .slide .span1 p,h3,h5,big{
+     position:relative;
+     top:-112px;
+     left:24vw;
+     margin-bottom: 12px;
+     z-index: 1; 
+     font-size:clamp(13px,2vw,18px);
+     padding-left:1.2vw;
+     overflow-x: hidden;
+   }
+   .container .handcrafts .slider .slide .span2 a,
+   .container .handcrafts .slider .slide .span2 a,
+   .container .handcrafts .slider .slide .span2 a{
+     position:absolute;
+     top:32vh;
+     left:55vw;
+     z-index:1;
+     border: 1px solid rgb(14, 126, 64);
+     padding:1.2vw 1.5vw;
+     border-radius: 32px;
+     background-color:green;
+     color:black;
+     font-weight:bold;
+      
+
+   }
+   .container .handcrafts div .fa-arrow-right,
+   .container .handcrafts div .fa-arrow-right,
+   .container .handcrafts div .fa-arrow-right{
+     font-size: 23px;
+     position:relative;
+     color:rgb(7, 121, 41);
+     border-radius: 50% 50%;
+     border:1px solid white;
+     padding:12px;
+     background-color:white;
+     float: right;
+     z-index:1;
+     cursor:pointer;
+     top:22vh;
+     left:-9vw;
+    
+}
+.container .handcrafts div .fa-arrow-left,
+.container .handcrafts div .fa-arrow-left,
+.container .handcrafts div .fa-arrow-left{
+     font-size: 23px;
+     position:relative;
+     color:rgb(7, 121, 41);
+     border-radius: 50% 50%;
+     border:1px solid white;
+     padding:12px;
+     background-color:white;
+     z-index:1;
+     float: left;
+     cursor:pointer;
+     top:22vh;
+     right:-9vw;
+     display: none;
+   
+}
+
+ 
+
+/* -----------------3rd row in grids-------offers section-------------- */
+  .container .offers{
+       grid-area:offers;
+       background-color:rgb(255, 255, 255);
+       width:100vw;
+  }
+.container .offers h2{
+     position:relative;
+     padding:22px 23px;
+     margin-left:51px;
+  }
+.container .offers .cards{
+     margin:22px 42px;
+     display: flex;
+     flex-wrap:wrap ;
+     width: 100vw;
+     justify-content:space-evenly;
+ 
+}
+/* -----1st card ---- */
+  .container .offers .cards .card{
+     box-shadow:0px 0px 5px rgb(36, 33, 33);
+     width:320px;
+     height:330px;
+     border: 2px solid rgb(255, 255, 255);
+     border-radius:12px;
+     background-color:rgb(255, 255, 255);
+     margin-bottom:22px;
+  }
+  .container .offers .cards .card img{
+     width:317px;
+     height:180px;
+     border-radius:12px 12px 0px 0px;
+     border-bottom: 2px solid rgb(227, 222, 221);
+     
+  }
+  .container .offers .cards .card h4,p{
+     margin-left:12px;
+     
+  }
+  .container .offers .cards .card p big{
+     position: relative;
+     top: 14px;
+     left: 1px;
+  }
+  .container .offers .cards .card p a{
+     float: right;
+     margin:-11px 32px;
+     padding:8px 14px; 
+     border-radius:32px;
+     color:azure;
+     background-color:rgb(5, 98, 5);  
+  }
+  /* ------------------4th row in grids------------------ */
+  .container .recommends{
+       grid-area:recommends;
+       position:relative;
+       background-color:#edebe9;
+       margin-bottom: 6vh;
+  }
+  .container .recommends h2{
+     padding:22px 52px;
+  }
+  .container .recommends .rcmd-cards{
+     display: flex;
+     flex-wrap:wrap;
+     padding-left: 52px;
+     gap:52px
+  }
+  .container .recommends .rcmd-card{
+     border: 1px solid rgb(228, 208, 208);
+     margin-bottom:2vh;
+     width:350px;
+     height:160px;
+     background-color:white;
+     border-radius: 12px;
+  } 
+  .container .recommends .rcmd-card img{
+     width:90px;
+     height:80px;
+     margin: 15px;
+     border-radius: 12px;
+  }
+  .container .recommends .rcmd-card h3{
+     margin:6vh -11vw;
+     font-family:cursive;
+     font-size:clamp(13px,1vw,22px);
+  }
+  .container .recommends .rcmd-card h4{
+     margin:-82px 32px; 
+  }
+  .container .recommends .rcmd-card a{
+    
+     position: relative;
+     color:rgb(250, 250, 250);
+     padding:12px 22px;
+     background-color:rgb(27, 119, 36);
+     border-radius: 22px;
+     float:right;
+     margin-right:18px;
+     top:52px;
+  }
+
+  /* -------------5th row----------------------------- */
+  .container .footer{
+       grid-area:footer;
+       background-color:#edebe9;
+       position:relative;
+       font-family: SoDoSans_Bold,Helvetica,sans-serif;
+
+  } 
+  .container .footer h2{
+     padding:32px 62px;
+     font-size:clamp(12px,2vw,22px)
+  }
+  .container .footer a{
+     float: right;
+     margin:-8vh 93px;
+     font-size:12px;
+     font-weight:bold;
+     color:green;
+  }
+  .container .footer img{
+    width:80vw;
+    height:300px;
+    object-fit:cover;
+    border-radius: 12px;
+    margin-left: 12vw;
+      
+    
+  }
+  .container .footer .p1{
+     color:green;
+     background-color:rgb(253, 253, 253);
+     padding:5px 7px;
+     width:90px;
+     position:relative;
+     margin:-48vh 0px 0px 17vw;
+     border-radius: 6px;
+     font-size: 10px; 
+     font-weight:bold ;
+     z-index:2px;   
+  }
+  .container .footer #h3{
+     color:white;
+     font-size:clamp(16px,2vw,30px);
+     position:relative;
+     margin:38vh -5vw;
+
+
+  }
+  .container .footer .p2{
+      font-size:clamp(12px,2vw,15px);
+      position:relative;
+      margin:-54vh 0px 0px 17vw;
+      color:white;
+      width:72vw;
+      
+  }  
+  .container .footer #link{
+     color:green;
+     background-color:rgb(246, 246, 246);
+     padding:1.7vh 4vw;
+     position:relative;
+     border-radius: 22px;
+     float:left;
+     margin:3vh 0px 0px 17vw;
+
+  }
+
+    /* -------------6th row----------------------------- */
+.container .last-footer{
+     grid-area:last-footer;
+     background-color:#0e382c;
+     color:white;
+     
+}
+.container .last-footer .first{
+   padding:42px 12px 10px 62px;
+   width:133px;
+   
+
+}
+.container .last-footer .second,.third,.fourth,.fifth,.sixth{
+   position:relative;
+   float:left;
+   top:-72px;
+   left:92px;
+   margin-left:72px;
+   margin-bottom:22px;
+
+}
+.container .last-footer p{
+   margin-bottom: 16px;
+
+}
+.container .last-footer .h3{
+   font-weight: bold;
+   font-size:17px
+    
+}
+.container .last-footer .fa-brands{
+   color:white;
+   margin-left:12px;
+   font-size:22px;
+   position: relative;
+   left:-12px;
+}
+.container .last-footer a img{
+   display:block;
+   margin-bottom:12px;
+}
+
+
+
+
+/* --------------------------- @ MEDIA QUERIES AT HERE-------------------------------------------------------------------------------- */
+
+
+
+
+@media(max-width:700px){
+   .navbar .first ul, .navbar .second, .navbar .third{
+      display: none; 
+       
+  }
+  
+  
+/* ---small nav ----- */
+  .small-nav{
+   display:none;
+}
+   .small-nav a{
+      padding:10px;
+      display:block;
+      text-align: center;
+      font-size: 3.8vw;   
+
+   }
+
+   .small-nav a:hover{
+      background-color:rgb(215, 223, 216);
+   }
+  /* --------------------------- */
+   .navbar .fa-bars{
+      display:block;
+   }
+/* ------------container--------------- */
+   .container{
+      display:grid;
+      width:100vw;
+      grid-template-columns:1fr;
+      grid-template-rows:0.3fr 4fr 5fr 2.5fr 2fr;
+      grid-template-areas:"link"
+                          "handcrafts"
+                          "offers"
+                          "recommends"
+                          "footer"
+                           "last-footer"
+  }
+
+  .container .link{
+   grid-area:link;
+   background-color:rgb(29, 63, 49);
+   position:relative;
+   margin-top:0.8px; 
+    
+   }
+
+   .navbar .fa-bars{
+   position:relative;
+   float:right;
+   margin:-55px 22px;
+   font-size:22px;
+   display:block;
+   }
+   .container .handcrafts .images{
+       width:100vw;
+      
+}
+.container .handcrafts .slider .slide .span2 a{
+   position:relative;
+   left:35vw;
+   top:-21vh;
+   padding:6px 12px;
+   font-size:13px;
+    
+}
+
+.container .offers .cards{
+   margin-left:-2px;
+   display: flex;
+   justify-content:space-around;
+   
+}
+
+.container .recommends .rcmd-card h3{
+   margin:6vh 6vw;
+   font-family:cursive;
+   font-size:clamp(13px,1vw,22px);
+}
+
+.container .last-footer{
+   grid-area:last-footer;
+   display:none;
+}
+
+.container .recommends .rcmd-cards{
+   display: flex;
+   justify-content:center
+}
+
+}
